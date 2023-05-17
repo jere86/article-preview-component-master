@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(210, 46%, 95%);
+}
+
+main {
+    width: 45.5rem;
+    height: 17.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+}
+
+.drawers {
+    border-radius: 1rem 0 0 1rem;    
+}
+
+.article {
+    margin-left: -4rem;
+    background-color: white;
+    padding: 2rem 2.5rem 2rem 2rem;
+    border-radius: 0 1rem 1rem 0;
+}
+
+.article > p:nth-child(1) {
+    color: hsl(217, 19%, 35%);
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+    margin-bottom: 0.8rem;
+    margin-right: 1rem;
+}
+
+.article > p:nth-child(2) {
+    color: hsl(214, 17%, 51%);
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    margin-bottom: 1.3rem;
+    margin-right: 1rem;
+}
+
+.user, .user-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+.avatar {
+    width: 2.5rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.name {
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+    margin: 0.2rem 0rem 0.2rem;
+}
+
+.date {
+    color: hsl(212, 23%, 69%);
+}
+
+#button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: hsl(210, 46%, 95%);
+    margin-right: 1rem;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+}
+
+#buttonClose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: hsl(214, 17%, 51%);
+    margin-right: 1rem;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+#buttonClose svg path{
+    fill: white;
+}
+
+.share {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    height: 3.4rem;
+    width: 15.5rem;
+    border-radius: 0.5rem;
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(212, 23%, 69%);
+    font-size: 0.75rem;
+    letter-spacing: 0.3rem;
+    position: absolute;
+    top: -5.3rem;
+    left: -6.6rem;
+    box-shadow: 0 0.5rem 1rem -0.5rem hsl(214, 17%, 51%);
+    cursor: default;
+}
+
+.share:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 45%;
+  width: 0;
+  border-top: 0.7rem solid hsl(217, 19%, 35%);
+  border-left: 0.7rem solid transparent;
+  border-right: 0.7rem solid transparent;
+  z-index: 2;
+}
+
+.share-media {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.share-media a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+footer {
+    position: absolute;
+    bottom: 0.5rem;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+footer a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 850px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 20.5rem;
+        height: 32rem;
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+
+    .drawers {
+        border-radius: 0;
+        position: relative;
+        top: -1rem;
+    }
+
+    .article {
+        border-radius: 0;
+        margin-left: 0;
+        margin-top: -3.9rem;
+        padding: 2.2rem 1.7rem 1.2rem 2rem;
+        z-index: 1;
+        position: relative;
+    }
+
+    .article > p:nth-child(1) {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-bottom: 0.85rem;
+        margin-right: 0rem;
+    }
+    
+    .article > p:nth-child(2) {
+        line-height: 1.25rem;
+        margin-bottom: 1.9rem;
+    }
+
+    #button {
+        margin-right: 0.3rem;
+    }
+
+    #buttonClose {
+        display: none;
+        margin-top: 0.3rem;
+        margin-right: 0.3rem;
+        margin-left: auto;
+        background-color: hsl(214, 17%, 51%);
+    }
+
+    .share {
+        height: 4rem;
+        width: 20.5rem;
+        border-radius: 0;
+        padding-right: 7.4rem;
+        letter-spacing: 0.4rem;
+        position: absolute;
+        left: -16.5rem;
+        top: -1rem;
+        z-index: -1;
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+
+    .share:after {
+        width:  100%;
+        height: 1rem;
+        left: 0;
+        border: none;
+        background-color: hsl(210, 46%, 95%);
+    }
+
+    .share-media {
+        width: 5.8rem;
+    }
+
+    .user {
+        position: relative;
+        z-index: -5;
+    }
+}
